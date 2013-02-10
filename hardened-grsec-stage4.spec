@@ -54,12 +54,11 @@ portage_confdir: /tools/catalyst/specs/etcportage
 # stage4 kernel setup
 boot/kernel: hardened
 boot/kernel/hardened/sources: =sys-kernel/hardened-sources-3.7.5
-boot/kernel/hardened/config: /tools/catalyst/specs/setup/grsec-3.7.5.config
+boot/kernel/hardened/config: /tools/catalyst/specs/setup/grsec-3.7.5-r1.config
 boot/kernel/hardened/packages:
         net-firewall/iptables
         sys-fs/fuse
         sys-fs/lvm2
-        sys-fs/squashfs-tools
 
 # services to add
 stage4/rcadd: sshd|default vixie-cron|default sysklogd|default lvm|boot ntpd|default
